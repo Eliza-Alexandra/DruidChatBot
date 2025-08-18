@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Hotel Booking Site</h1>
+        <nav>
+            <ul>
+                <li><a href="#search">Search Hotels</a></li>
+                <li><a href="#bookings">My Bookings</a></li>
+                <li><a href="#reviews">My Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="search">
+            <h2>Search for Hotels</h2>
+            <form>
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>
+                <button type="submit">Search</button>
+            </form>
+            <div id="hotel-results">
+                <h3>Available Hotels</h3>
+                <ul>
+                    <li>Hotel Sunshine - $150.00 per night - Rating: 4.5</li>
+                    <li>Mountain Retreat - $200.00 per night - Rating: 4.8</li>
+                </ul>
+            </div>
+        </section>
+        <section id="bookings">
+            <h2>My Bookings</h2>
+            <ul>
+                <li>Booking ID: 1 - Hotel Sunshine - Check-in: 2023-12-01, Check-out: 2023-12-05</li>
+                <li>Booking ID: 2 - Mountain Retreat - Check-in: 2023-12-10, Check-out: 2023-12-15</li>
+            </ul>
+        </section>
+        <section id="reviews">
+            <h2>My Reviews</h2>
+            <ul>
+                <li>Hotel Sunshine - Rating: 4.5 - Comment: Great stay!</li>
+                <li>Mountain Retreat - Rating: 5.0 - Comment: Amazing experience!</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Hotel Booking Site</p>
+    </footer>
+</body>
+</html>
