@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Site</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #007BFF; color: white; padding: 10px 20px; text-align: center; }
+        .container { padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input, select { width: 100%; padding: 8px; }
+        button { background: #28A745; color: white; border: none; padding: 10px; cursor: pointer; }
+        button:hover { background: #218838; }
+        .results { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hotel Booking Site</h1>
+    </header>
+    <div class="container">
+        <h2>Search for Hotels</h2>
+        <div class="form-group">
+            <label for="location">Select Location:</label>
+            <select id="location">
+                <option value="New York">New York</option>
+                <option value="Miami">Miami</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" required>
+        </div>
+        <div class="form-group">
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout" required>
+        </div>
+        <div class="form-group">
+            <label for="rooms">Number of Rooms:</label>
+            <input type="number" id="rooms" min="1" value="1" required>
+        </div>
+        <button type="submit">Search</button>
+        <div class="results">
+            <h3>Available Hotels</h3>
+            <ul>
+                <li>Grand Hotel - New York</li>
+                <li>Beach Resort - Miami</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
