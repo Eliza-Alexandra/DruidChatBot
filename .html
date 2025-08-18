@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Flight Booking Site</h1>
+        <nav>
+            <ul>
+                <li><a href="#search">Search Flights</a></li>
+                <li><a href="#my-bookings">My Bookings</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="search">
+            <h2>Search Flights</h2>
+            <form action="#" method="POST">
+                <label for="departure">Departure:</label>
+                <input type="text" id="departure" name="departure" required>
+                <label for="arrival">Arrival:</label>
+                <input type="text" id="arrival" name="arrival" required>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+        <section id="flights">
+            <h2>Available Flights</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Flight</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Flight data will be populated here -->
+                </tbody>
+            </table>
+        </section>
+        <section id="my-bookings">
+            <h2>My Bookings</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Flight</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- User bookings will be populated here -->
+                </tbody>
+            </table>
+        </section>
+        <section id="login">
+            <h2>Login</h2>
+            <form action="#" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Flight Booking Site</p>
+    </footer>
+</body>
+</html>
