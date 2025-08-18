@@ -1,44 +1,43 @@
 name: Convert HTML to Base64 and Deploy to GitHub Pages
 
-# Declanșează workflow-ul atunci când un fișier HTML este actualizat
 on:
   push:
     branches:
-      - main  # sau alt branch pe care îl folosești
+      - main
     paths:
-      - 'path/to/generated_html/*.html'  # Calea fișierului generat de Druid
+      - 'generated_html/*.html'  # Căutați fișiere HTML în repo
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest  # Folosim un runner Ubuntu
+  convert-and-deploy:
+    runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repo-ul
+      # 1. Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # 2. Definirea fișierului HTML și conversia acestuia în Base64
-      - name: Convert HTML to Base64
+      # 2. Citim fișierul HTML
+      - name: Read HTML File and Encode to Base64
         run: |
-          # Căutăm fișierul HTML generat de Druid
-          html_file="path/to/generated_html/document.html"  # Înlocuiește cu calea corectă
-          
           # Citim conținutul fișierului HTML
-          html_content=$(cat "$html_file")
+          html_content=$(cat generated_html/document.html)
 
-          # Convertim HTML-ul în Base64
+          # Convertim HTML în Base64
           base64_content=$(echo -n "$html_content" | base64)
-
-          # Afișăm rezultatul în log
-          echo "Base64 encoded HTML: $base64_content"
 
           # Salvăm rezultatul într-un fișier
           echo "$base64_content" > base64_output.txt
 
-      # 3. Setăm GitHub Pages pentru a publica fișierul HTML
+      # 3. Copiem fișierul Base64 în folderul public
+      - name: Copy Base64 Content to Public Folder
+        run: |
+          mkdir -p public
+          cp base64_output.txt public/
+
+      # 4. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages  # Folosim branch-ul gh-pages pentru GitHub Pages
-          folder: path/to/generated_html  # Calea către folderul care conține fișierele HTML
+          folder: public    # Publicăm din folderul public
           token: ${{ secrets.GITHUB_TOKEN }}  # Token-ul GitHub pentru autentificare
