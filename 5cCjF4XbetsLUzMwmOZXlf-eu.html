@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Booking</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #007BFF; color: white; padding: 10px 20px; text-align: center; }
+        .container { padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input, select { width: 100%; padding: 10px; }
+        button { background: #28A745; color: white; border: none; padding: 10px; cursor: pointer; }
+        button:hover { background: #218838; }
+        .results { margin-top: 20px; }
+        .hotel { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hotel Room Booking</h1>
+    </header>
+    <div class="container">
+        <h2>Search for Hotels</h2>
+        <div class="form-group">
+            <label for="city">City/Town:</label>
+            <input type="text" id="city" placeholder="Enter city or town">
+        </div>
+        <div class="form-group">
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin">
+        </div>
+        <div class="form-group">
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout">
+        </div>
+        <div class="form-group">
+            <label for="filters">Filters:</label>
+            <select id="filters">
+                <option value="">Select filter</option>
+                <option value="price">Price</option>
+                <option value="rating">Rating</option>
+            </select>
+        </div>
+        <button onclick="searchHotels()">Search</button>
+        <div class="results" id="results"></div>
+    </div>
+    <script>
+        function searchHotels() {
+            // This function will handle the search logic and display results
+            const city = document.getElementById('city').value;
+            const checkin = document.getElementById('checkin').value;
+            const checkout = document.getElementById('checkout').value;
+            const filter = document.getElementById('filters').value;
+            // Here you would typically make an API call to fetch hotel data based on the inputs
+            document.getElementById('results').innerHTML = `<div class='hotel'>Hotel Sunshine - $150 per night</div><div class='hotel'>Mountain Retreat - $120 per night</div>`;
+        }
+    </script>
+</body>
+</html>
