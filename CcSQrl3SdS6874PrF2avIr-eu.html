@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background-color: #4CAF50; color: white; padding: 10px 0; text-align: center; }
+        .container { padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input, select { width: 100%; padding: 10px; }
+        button { background-color: #4CAF50; color: white; padding: 10px; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+        .hotel-list { margin-top: 20px; }
+        .hotel { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hotel Booking Website</h1>
+    </header>
+    <div class="container">
+        <h2>Search for Hotels</h2>
+        <div class="form-group">
+            <label for="location">Location:</label>
+            <select id="location">
+                <option value="miami">Miami</option>
+                <option value="denver">Denver</option>
+                <option value="new_york">New York</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin">
+        </div>
+        <div class="form-group">
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout">
+        </div>
+        <div class="form-group">
+            <label for="persons">Number of Persons:</label>
+            <input type="number" id="persons" min="1" value="1">
+        </div>
+        <button onclick="searchHotels()">Search</button>
+
+        <div class="hotel-list" id="hotelList" style="display:none;">
+            <h2>Available Hotels</h2>
+            <div class="hotel">
+                <h3>Hotel Sunshine</h3>
+                <p>Location: Miami</p>
+                <p>Price per Night: $150.00</p>
+                <p>Amenities: Pool, Free WiFi, Breakfast</p>
+                <button>Book Now</button>
+            </div>
+            <div class="hotel">
+                <h3>Mountain Retreat</h3>
+                <p>Location: Denver</p>
+                <p>Price per Night: $200.00</p>
+                <p>Amenities: Spa, Free Parking, Gym</p>
+                <button>Book Now</button>
+            </div>
+            <div class="hotel">
+                <h3>City Center Inn</h3>
+                <p>Location: New York</p>
+                <p>Price per Night: $250.00</p>
+                <p>Amenities: Restaurant, Free WiFi, Gym</p>
+                <button>Book Now</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function searchHotels() {
+            // Functionality to search hotels based on user input
+            document.getElementById('hotelList').style.display = 'block';
+            alert('Search functionality to be implemented.');
+        }
+    </script>
+</body>
+</html>
