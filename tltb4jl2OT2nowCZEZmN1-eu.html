@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking Site</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background-color: #4CAF50; color: white; padding: 10px 0; text-align: center; }
+        .container { padding: 20px; }
+        .search-form { margin-bottom: 20px; }
+        .search-form input, .search-form select { padding: 10px; margin: 5px; width: 200px; }
+        .flights-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .flights-table th, .flights-table td { border: 1px solid #ddd; padding: 8px; }
+        .flights-table th { background-color: #4CAF50; color: white; }
+        .button { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; cursor: pointer; }
+        .button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Flight Booking Site</h1>
+</header>
+<div class="container">
+    <div class="search-form">
+        <h2>Search Flights</h2>
+        <input type="text" placeholder="Departure Location" />
+        <input type="text" placeholder="Arrival Location" />
+        <input type="date" placeholder="Departure Date" />
+        <input type="date" placeholder="Return Date" />
+        <input type="number" placeholder="Number of Passengers" />
+        <button class="button">Search</button>
+    </div>
+    <table class="flights-table">
+        <thead>
+            <tr>
+                <th>Flight ID</th>
+                <th>Departure</th>
+                <th>Arrival</th>
+                <th>Price</th>
+                <th>Airline</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>New York</td>
+                <td>Los Angeles</td>
+                <td>$300.00</td>
+                <td>Airline A</td>
+                <td><button class="button">Book Now</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Chicago</td>
+                <td>Miami</td>
+                <td>$150.00</td>
+                <td>Airline B</td>
+                <td><button class="button">Book Now</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>San Francisco</td>
+                <td>Seattle</td>
+                <td>$200.00</td>
+                <td>Airline C</td>
+                <td><button class="button">Book Now</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
