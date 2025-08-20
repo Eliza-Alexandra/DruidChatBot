@@ -1,0 +1,19 @@
+name: Export JSON to Retool
+
+on:
+  push:
+    branches:
+      - main   # sau branch-ul dorit
+  schedule:
+    - cron: "0 3 * * *"  # opțional, rulează zilnic la ora 03:00 UTC
+
+jobs:
+  call-retool:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Retool Webhook
+        run: |
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -d '{"triggeredBy":"GitHub Actions"}' \
+            ${{ secrets.RETOOL_WEBHOOK_URL }}
