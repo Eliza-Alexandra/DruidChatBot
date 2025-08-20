@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking Site</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background: #35424a; color: #ffffff; padding: 10px 0; text-align: center; }
+        .container { width: 80%; margin: auto; overflow: hidden; }
+        form { background: #ffffff; padding: 20px; margin: 20px 0; border-radius: 5px; }
+        input[type="text"], input[type="email"], input[type="password"], input[type="datetime-local"] { width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { background: #35424a; color: #ffffff; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #45a049; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
+        th { background: #35424a; color: #ffffff; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flight Booking Site</h1>
+    </header>
+    <div class="container">
+        <h2>Search Flights</h2>
+        <form id="searchForm">
+            <input type="text" placeholder="Departure" required>
+            <input type="text" placeholder="Arrival" required>
+            <input type="datetime-local" required>
+            <button type="submit">Search</button>
+        </form>
+        <h2>Available Flights</h2>
+        <table>
+            <tr>
+                <th>Airline</th>
+                <th>Departure</th>
+                <th>Arrival</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>Airline A</td>
+                <td>City A</td>
+                <td>City B</td>
+                <td>$200.00</td>
+                <td><button onclick="bookFlight(1)">Book</button></td>
+            </tr>
+            <tr>
+                <td>Airline B</td>
+                <td>City C</td>
+                <td>City D</td>
+                <td>$150.00</td>
+                <td><button onclick="bookFlight(2)">Book</button></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function bookFlight(flightId) {
+            alert('Flight ' + flightId + ' booked successfully!');
+        }
+    </script>
+</body>
+</html>
