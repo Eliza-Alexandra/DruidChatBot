@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Shop</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background: #35424a; color: #ffffff; padding: 10px 0; text-align: center; }
+        .container { width: 80%; margin: auto; overflow: hidden; }
+        form { background: #ffffff; padding: 20px; margin: 20px 0; border-radius: 5px; }
+        input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="number"] { width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { background: #35424a; color: #ffffff; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #45a049; }
+        .ticket-list { margin: 20px 0; }
+        .ticket { background: #e2e2e2; padding: 10px; margin: 5px 0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bus Ticket Shop</h1>
+    </header>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registrationForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="text" placeholder="Phone Number">
+            <button type="submit">Register</button>
+        </form>
+        <h2>Search for Routes</h2>
+        <form id="searchForm">
+            <input type="text" placeholder="Departure Location" required>
+            <input type="text" placeholder="Arrival Location" required>
+            <button type="submit">Search</button>
+        </form>
+        <div class="ticket-list">
+            <h2>Available Tickets</h2>
+            <div class="ticket">
+                <p>Route: City A to City B</p>
+                <p>Price: $25.00</p>
+                <button>Book Now</button>
+            </div>
+            <div class="ticket">
+                <p>Route: City C to City D</p>
+                <p>Price: $30.00</p>
+                <button>Book Now</button>
+            </div>
+        </div>
+        <h2>Customer Support</h2>
+        <p>If you need assistance, please contact us at support@busticketshop.com</p>
+    </div>
+</body>
+</html>
