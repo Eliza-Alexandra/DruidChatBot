@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #007BFF; color: white; padding: 10px 20px; text-align: center; }
+        .container { padding: 20px; }
+        .hotel-list { margin-top: 20px; }
+        .hotel { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+        button { background: #28a745; color: white; border: none; padding: 10px; cursor: pointer; }
+        button:hover { background: #218838; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Hotel Booking Website</h1>
+</header>
+<div class="container">
+    <h2>Search for Hotels</h2>
+    <label for="location">Location:</label>
+    <select id="location">
+        <option value="New York">New York</option>
+        <option value="Miami">Miami</option>
+    </select>
+    <br><br>
+    <label for="checkIn">Check-in Date:</label>
+    <input type="date" id="checkIn">
+    <br><br>
+    <label for="checkOut">Check-out Date:</label>
+    <input type="date" id="checkOut">
+    <br><br>
+    <label for="numPersons">Number of Persons:</label>
+    <input type="number" id="numPersons" min="1" value="1">
+    <br><br>
+    <label for="numRooms">Number of Rooms:</label>
+    <input type="number" id="numRooms" min="1" value="1">
+    <br><br>
+    <button onclick="searchHotels()">Search</button>
+    <div class="hotel-list" id="hotelList">
+        <h3>Available Hotels</h3>
+        <div class="hotel">
+            <h4>Grand Hotel</h4>
+            <p>Location: New York</p>
+            <p>Price per Night: $200.00</p>
+            <button onclick="bookHotel(1)">Book Now</button>
+        </div>
+        <div class="hotel">
+            <h4>Beach Resort</h4>
+            <p>Location: Miami</p>
+            <p>Price per Night: $150.00</p>
+            <button onclick="bookHotel(2)">Book Now</button>
+        </div>
+    </div>
+</div>
+<script>
+    function searchHotels() {
+        const location = document.getElementById('location').value;
+        const checkIn = document.getElementById('checkIn').value;
+        const checkOut = document.getElementById('checkOut').value;
+        const numPersons = document.getElementById('numPersons').value;
+        const numRooms = document.getElementById('numRooms').value;
+        // Implement search functionality here
+        alert('Searching for hotels in ' + location + ' from ' + checkIn + ' to ' + checkOut + ' for ' + numPersons + ' persons in ' + numRooms + ' rooms.');
+    }
+    function bookHotel(hotelId) {
+        // Implement booking functionality here
+        alert('Booking hotel with ID: ' + hotelId);
+    }
+</script>
+</body>
+</html>
