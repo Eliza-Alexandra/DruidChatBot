@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #007BFF; color: white; padding: 10px 20px; text-align: center; }
+        .container { padding: 20px; }
+        .search-form { margin-bottom: 20px; }
+        .hotel-list { margin-top: 20px; }
+        .hotel-item { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+        button { background: #28a745; color: white; border: none; padding: 10px; cursor: pointer; }
+        button:hover { background: #218838; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hotel Booking Website</h1>
+    </header>
+    <div class="container">
+        <div class="search-form">
+            <h2>Search for Hotels</h2>
+            <form id="searchForm">
+                <label for="location">Location:</label>
+                <input type="text" id="location" required>
+                <label for="rooms">Number of Rooms:</label>
+                <input type="number" id="rooms" required>
+                <label for="persons">Number of Persons:</label>
+                <input type="number" id="persons" required>
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" required>
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="hotel-list" id="hotelList">
+            <h2>Available Hotels</h2>
+            <div class="hotel-item">
+                <h3>Grand Hotel</h3>
+                <p>Location: New York</p>
+                <p>Rooms Available: 10</p>
+                <p>Price per Night: $200.00</p>
+                <button>Book Now</button>
+            </div>
+            <div class="hotel-item">
+                <h3>Beach Resort</h3>
+                <p>Location: Miami</p>
+                <p>Rooms Available: 5</p>
+                <p>Price per Night: $150.00</p>
+                <button>Book Now</button>
+            </div>
+            <div class="hotel-item">
+                <h3>Mountain Lodge</h3>
+                <p>Location: Aspen</p>
+                <p>Rooms Available: 8</p>
+                <p>Price per Night: $300.00</p>
+                <button>Book Now</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Logic to search hotels based on user input
+            alert('Search functionality to be implemented.');
+        });
+    </script>
+</body>
+</html>
