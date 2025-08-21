@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Shop</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background: #35424a; color: #ffffff; padding: 10px 0; text-align: center; }
+        .container { width: 80%; margin: auto; overflow: hidden; }
+        button { padding: 10px 15px; background: #35424a; color: #ffffff; border: none; cursor: pointer; }
+        button:hover { background: #e8491d; }
+        .form-group { margin: 15px 0; }
+        .form-group label { display: block; margin-bottom: 5px; }
+        .form-group input { width: 100%; padding: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bus Ticket Shop</h1>
+    </header>
+    <div class="container">
+        <h2>Book Your Bus Ticket</h2>
+        <div class="form-group">
+            <label for="route">Select Route:</label>
+            <select id="route">
+                <option value="1">City A to City B</option>
+                <option value="2">City B to City C</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="number_of_tickets">Number of Tickets:</label>
+            <input type="number" id="number_of_tickets" min="1" value="1">
+        </div>
+        <button onclick="bookTicket()">Book Ticket</button>
+        <h2>Real-Time Bus Schedules</h2>
+        <button onclick="viewSchedules()">View Schedules</button>
+        <h2>Customer Support</h2>
+        <button onclick="contactSupport()">Contact Support</button>
+    </div>
+    <script>
+        function bookTicket() {
+            alert('Ticket booked successfully!');
+        }
+        function viewSchedules() {
+            alert('Displaying real-time bus schedules...');
+        }
+        function contactSupport() {
+            alert('Contacting customer support...');
+        }
+    </script>
+</body>
+</html>
