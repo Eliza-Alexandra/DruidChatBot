@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Coffee Shop</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+        header { background: #35424a; color: #ffffff; padding: 10px 0; text-align: center; }
+        .container { width: 80%; margin: auto; overflow: hidden; }
+        .menu { display: flex; flex-wrap: wrap; justify-content: space-between; }
+        .menu-item { background: #ffffff; border: 1px solid #dddddd; border-radius: 5px; margin: 10px; padding: 15px; flex: 1 1 30%; }
+        button { background: #35424a; color: #ffffff; border: none; padding: 10px; cursor: pointer; }
+        button:hover { background: #45a049; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Sustainable Coffee Shop</h1>
+    </header>
+    <div class="container">
+        <h2>Menu</h2>
+        <div class="menu">
+            <div class="menu-item">
+                <h3>Espresso</h3>
+                <p>Price: $2.50</p>
+                <button onclick="orderItem('Espresso')">Order</button>
+            </div>
+            <div class="menu-item">
+                <h3>Cappuccino</h3>
+                <p>Price: $3.00</p>
+                <button onclick="orderItem('Cappuccino')">Order</button>
+            </div>
+            <div class="menu-item">
+                <h3>Blueberry Muffin</h3>
+                <p>Price: $2.00</p>
+                <button onclick="orderItem('Blueberry Muffin')">Order</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function orderItem(item) {
+            alert('You have ordered: ' + item);
+        }
+    </script>
+</body>
+</html>
