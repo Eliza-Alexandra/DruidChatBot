@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Platform</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #4CAF50; color: white; padding: 10px 0; text-align: center; }
+        .container { padding: 20px; }
+        .search-form { margin-bottom: 20px; }
+        .search-form input, .search-form select { padding: 10px; margin: 5px; width: 200px; }
+        .search-form button { padding: 10px 15px; background: #4CAF50; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Travel Platform</h1>
+    </header>
+    <div class="container">
+        <div class="search-form">
+            <h2>Search for Destinations</h2>
+            <input type="text" placeholder="Start Date" id="start-date">
+            <input type="text" placeholder="End Date" id="end-date">
+            <input type="number" placeholder="Number of Rooms" id="num-rooms">
+            <input type="number" placeholder="Number of Persons" id="num-persons">
+            <select id="destination-type">
+                <option value="">Select Destination Type</option>
+                <option value="adventure">Adventure</option>
+                <option value="relaxation">Relaxation</option>
+                <option value="cultural">Cultural</option>
+            </select>
+            <input type="text" placeholder="Price Range" id="price-range">
+            <input type="text" placeholder="User Rating" id="user-rating">
+            <button onclick="searchDestinations()">Search</button>
+        </div>
+    </div>
+    <script>
+        function searchDestinations() {
+            const startDate = document.getElementById('start-date').value;
+            const endDate = document.getElementById('end-date').value;
+            const numRooms = document.getElementById('num-rooms').value;
+            const numPersons = document.getElementById('num-persons').value;
+            const destinationType = document.getElementById('destination-type').value;
+            const priceRange = document.getElementById('price-range').value;
+            const userRating = document.getElementById('user-rating').value;
+
+            // Redirect to results page with query parameters
+            window.location.href = `results.html?startDate=${startDate}&endDate=${endDate}&numRooms=${numRooms}&numPersons=${numPersons}&destinationType=${destinationType}&priceRange=${priceRange}&userRating=${userRating}`;
+        }
+    </script>
+</body>
+</html>
