@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #007BFF; color: white; padding: 10px 20px; text-align: center; }
+        .container { padding: 20px; }
+        .hotel-list { margin-top: 20px; }
+        .hotel { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+        .button { background: #28a745; color: white; padding: 10px; border: none; cursor: pointer; }
+        .button:hover { background: #218838; }
+        .hidden { display: none; }
+    </style>
+    <script>
+        function displayHotels() {
+            // Simulate hotel search results
+            const hotels = [
+                { name: 'Hotel Sunshine', location: 'Miami', price: 150.00, rating: 4.5 },
+                { name: 'Mountain Retreat', location: 'Denver', price: 200.00, rating: 4.7 }
+            ];
+            const hotelList = document.getElementById('hotelList');
+            hotelList.innerHTML = '';
+            hotels.forEach(hotel => {
+                hotelList.innerHTML += `<div class='hotel'>
+                    <h3>${hotel.name}</h3>
+                    <p>Location: ${hotel.location}</p>
+                    <p>Price per night: $${hotel.price.toFixed(2)}</p>
+                    <p>Rating: ${hotel.rating}</p>
+                    <button class='button' onclick='bookHotel("${hotel.name}")'>Book Now</button>
+                </div>`;
+            });
+        }
+
+        function bookHotel(hotelName) {
+            const bookingDetails = document.getElementById('bookingDetails');
+            bookingDetails.classList.remove('hidden');
+            bookingDetails.innerHTML = `<h3>Booking for ${hotelName}</h3>
+                <p>Address: <input type='text' placeholder='Enter your address' required></p>
+                <p>Card Details: <input type='text' placeholder='Card Number' required></p>
+                <button class='button'>Confirm Booking</button>`;
+        }
+    </script>
+</head>
+<body>
+<header>
+    <h1>Hotel Booking Website</h1>
+</header>
+<div class="container">
+    <h2>Search for Hotels</h2>
+    <form id="searchForm" onsubmit="event.preventDefault(); displayHotels();">
+        <select required>
+            <option value="">Select Location</option>
+            <option value="Miami">Miami</option>
+            <option value="Denver">Denver</option>
+        </select>
+        <input type="date" required>
+        <input type="date" required>
+        <input type="number" placeholder="Number of Rooms" required min="1">
+        <input type="number" placeholder="Number of Persons" required min="1">
+        <button type="submit" class="button">Search</button>
+    </form>
+    <div class="hotel-list" id="hotelList">
+        <h2>Available Hotels</h2>
+    </div>
+    <div id="bookingDetails" class="hidden"></div>
+</div>
+</body>
+</html>
