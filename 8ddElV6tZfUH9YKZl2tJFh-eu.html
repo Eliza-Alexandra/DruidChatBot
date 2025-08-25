@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Platform</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background: #6a0dad; color: #ffffff; padding: 10px 0; text-align: center; }
+        .container { width: 80%; margin: auto; overflow: hidden; }
+        form { margin: 20px 0; }
+        input[type="text"], input[type="password"], select { padding: 10px; margin: 5px 0; width: 100%; }
+        button { padding: 10px; background: #6a0dad; color: #ffffff; border: none; cursor: pointer; }
+        button:hover { background: #e8491d; }
+        .course-list { margin-top: 20px; }
+        .course { background: #ffffff; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .payment-section { background: #ffffff; padding: 15px; margin: 20px 0; border-radius: 5px; }
+        .payment-section h3 { margin-top: 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Learning Platform</h1>
+    </header>
+    <div class="container">
+        <h2>Search for Courses</h2>
+        <form id="searchForm">
+            <select required>
+                <option value="">Select Skill Type</option>
+                <option value="Soft Skills">Soft Skills</option>
+                <option value="Hard Skills">Hard Skills</option>
+            </select>
+            <select required>
+                <option value="">Select Duration</option>
+                <option value="Short-term">Short-term</option>
+                <option value="Medium-term">Medium-term</option>
+                <option value="Long-term">Long-term</option>
+            </select>
+            <select required>
+                <option value="">Select Format</option>
+                <option value="Online">Online</option>
+                <option value="In-person">In-person</option>
+            </select>
+            <select required>
+                <option value="">Select Expertise Level</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+        <div class="course-list">
+            <h2>Available Courses</h2>
+            <div class="course">
+                <h3>Data Analysis 101</h3>
+                <p>Learn the basics of data analysis.</p>
+                <p>Duration: 4 weeks | Format: Online | Rating: 4.5</p>
+                <button>Enroll</button>
+            </div>
+            <div class="course">
+                <h3>Effective Communication</h3>
+                <p>Enhance your communication skills.</p>
+                <p>Duration: 2 weeks | Format: In-person | Rating: 4.7</p>
+                <button>Enroll</button>
+            </div>
+        </div>
+        <div class="payment-section">
+            <h3>Payment Information</h3>
+            <form id="paymentForm">
+                <input type="text" placeholder="Cardholder Name" required>
+                <input type="text" placeholder="Card Number" required>
+                <input type="text" placeholder="Expiration Date (MM/YY)" required>
+                <input type="text" placeholder="CVV" required>
+                <button type="submit">Submit Payment</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
