@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSphere - Learning Platform</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background: #6a0dad; color: #ffffff; padding: 10px 0; text-align: center; }
+        h1 { margin: 0; }
+        .container { width: 80%; margin: auto; overflow: hidden; }
+        .course { background: #ffffff; padding: 20px; margin: 20px 0; border-radius: 5px; }
+        button { padding: 10px 15px; background: #6a0dad; color: #ffffff; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #7a1b9a; }
+        .payment { display: none; background: #ffffff; padding: 20px; margin: 20px 0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to SkillSphere</h1>
+    </header>
+    <div class="container">
+        <h2>Search for Courses</h2>
+        <form id="searchForm">
+            <input type="text" placeholder="Enter course name" required>
+            <input type="date" placeholder="Start Date" required>
+            <input type="date" placeholder="End Date" required>
+            <select required>
+                <option value="">Select Type of Learning</option>
+                <option value="Online">Online</option>
+                <option value="In-person">In-person</option>
+            </select>
+            <select required>
+                <option value="">Select Expertise Level</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+        <div id="results"></div>
+        <div class="payment" id="paymentSection">
+            <h3>Payment Details</h3>
+            <form id="paymentForm">
+                <input type="text" placeholder="Card Number" required>
+                <input type="text" placeholder="Cardholder Name" required>
+                <input type="date" placeholder="Expiry Date" required>
+                <input type="text" placeholder="CVV" required>
+                <button type="submit">Pay</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Simulate search results
+            document.getElementById('results').innerHTML = '<h3>Available Courses:</h3><div class="course"><h4>Data Analysis Basics</h4><p>Learn the fundamentals of data analysis.</p><button class="enrollBtn">Enroll</button></div><div class="course"><h4>Advanced Graphic Design</h4><p>Enhance your graphic design skills.</p><button class="enrollBtn">Enroll</button></div>';
+            document.getElementById('paymentSection').style.display = 'none';
+        });
+
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('enrollBtn')) {
+                document.getElementById('paymentSection').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
