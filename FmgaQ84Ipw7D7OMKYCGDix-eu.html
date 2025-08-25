@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Coffee Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #6f4c3e;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .menu-item {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 15px;
+            flex: 1 1 30%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        button {
+            background: #6f4c3e;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #5a3e32;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Sustainable Coffee Shop</h1>
+    </header>
+    <div class="container">
+        <h2>Menu</h2>
+        <div class="menu">
+            <div class="menu-item">
+                <h3>Organic Coffee</h3>
+                <p>Price: $3.50</p>
+                <button onclick="alert('You ordered Organic Coffee!')">Order</button>
+            </div>
+            <div class="menu-item">
+                <h3>Local Pastry</h3>
+                <p>Price: $2.00</p>
+                <button onclick="alert('You ordered Local Pastry!')">Order</button>
+            </div>
+        </div>
+        <h2>Loyalty Program</h2>
+        <button onclick="alert('Thank you for joining our Loyalty Program!')">Join Loyalty Program</button>
+    </div>
+</body>
+</html>
